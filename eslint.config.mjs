@@ -1,6 +1,7 @@
+import { FlatCompat } from '@eslint/eslintrc'
+import unusedImports from 'eslint-plugin-unused-imports'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { FlatCompat } from '@eslint/eslintrc'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -12,6 +13,9 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
+    plugins: {
+      'unused-imports': unusedImports,
+    },
     rules: {
       '@typescript-eslint/ban-ts-comment': 'warn',
       '@typescript-eslint/no-empty-object-type': 'warn',
@@ -28,6 +32,7 @@ const eslintConfig = [
           caughtErrorsIgnorePattern: '^(_|ignore)',
         },
       ],
+      'unused-imports/no-unused-imports': 'warn',
     },
   },
   {

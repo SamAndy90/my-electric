@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-stolzl: var(--font-stolzl);
+  --font-inter: var(--font-inter);
+  --font-manrope: var(--font-manrope);
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@theme {
+  --color-me_brand: #ffec0a;
+  --color-me_heading: #7c8389;
+  --color-me_text: #6b6b6b;
+  --color-me_light: #faf8fd;
+  --color-me_dark: #2b2b2b;
+}
