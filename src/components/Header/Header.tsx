@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import BrandName from '@/assets/brand-name-white.svg'
+import Logo from '@/assets/logo-white.svg'
 import { Container } from '@/common/Container'
 import { BsGeoAltFill } from 'react-icons/bs'
 import { FaTelegram, FaViber } from 'react-icons/fa'
@@ -11,8 +13,8 @@ export function Header() {
       <Container>
         <div className={'flex items-center justify-between'}>
           <Link href={'/'} className={'flex items-center gap-x-2'}>
-            <Image className={'max-w-10'} src={'/my-electric-logo.svg'} alt={'Logo'} />
-            <Image className={'max-w-28'} src={'/brand-name.svg'} alt={'Brand Name'} />
+            <Image className={'max-w-10'} src={Logo} alt={'Logo'} />
+            <Image className={'max-w-28'} src={BrandName} alt={'Brand Name'} />
           </Link>
           <div className={'flex items-end gap-x-8'}>
             <div className={'hidden items-center gap-x-2 lg:flex'}>

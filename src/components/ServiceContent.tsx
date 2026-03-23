@@ -7,7 +7,6 @@ export type ServiceContentProps = {
 
 export function ServiceContent({ data }: ServiceContentProps) {
   if (!data || data.length === 0) return null
-  console.log('datadta', data)
 
   return (
     <div className={'space-y-6 lg:space-y-8'}>

@@ -5,6 +5,8 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import BrandName from '@/assets/brand-name-black.svg'
+import Logo from '@/assets/logo-black.svg'
 import Modal from '@/common/Modal'
 import { Button } from '@/common/UI/Buttons'
 import { BsGeoAltFill } from 'react-icons/bs'
@@ -40,8 +42,8 @@ export default function ContactsButton({ label }: ContactsButtonProps) {
       >
         <div className={'bg-me_light flex flex-col items-center justify-between gap-y-8 px-4 py-8'}>
           <div className={'flex flex-col items-center gap-y-2'}>
-            <Image className={'max-w-13'} src={'/logo-black.svg'} alt={'Logo'} />
-            <Image className={'max-w-30'} src={'/brand-name-black.svg'} alt={'Brand Name'} />
+            <Image className={'max-w-13'} src={Logo} alt={'Logo'} />
+            <Image className={'max-w-30'} src={BrandName} alt={'Brand Name'} />
           </div>
 
           <div className={'flex flex-col items-center gap-y-4'}>
