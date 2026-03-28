@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'електрощит',
       'послуги електрика',
     ],
-    metadataBase: new URL('https://www.my-electric.website/'),
+    metadataBase: new URL('https://my-electric.vercel.app/'),
     openGraph: {
       title: meta.openGraph?.title ?? 'myELECTRIC — Професійні електромонтажні роботи',
       description:
