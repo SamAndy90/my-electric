@@ -32,37 +32,45 @@ export async function generateMetadata(): Promise<Metadata> {
     : '/opengraph-image.jpg'
 
   return {
-    title:
-      meta.title ?? 'myELECTRIC — Електрик Кам’янець-Подільський | Монтаж проводки та інверторів',
-    description:
-      meta.description ?? 'myELECTRIC — Послуги електрика, монтаж проводки та інверторів',
-    keywords: meta.keywords ?? [
-      'електрик',
-      'електромонтаж',
-      'монтаж проводки',
-      'кабельні траси',
-      'інвертор',
-      'акумулятор',
-      'резервне живлення',
-      'електрощит',
-      'послуги електрика',
-    ],
-    metadataBase: new URL('https://my-electric.vercel.app/'),
+    title: meta.title
+      ? meta.title
+      : 'myELECTRIC — Електрик Кам’янець-Подільський | Монтаж проводки та інверторів',
+    description: meta.description
+      ? meta.description
+      : 'myELECTRIC — Послуги електрика, монтаж проводки та інверторів',
+    keywords: meta.keywords
+      ? meta.keywords
+      : [
+          'електрик',
+          'електромонтаж',
+          'монтаж проводки',
+          'кабельні траси',
+          'інвертор',
+          'акумулятор',
+          'резервне живлення',
+          'електрощит',
+          'послуги електрика',
+        ],
+    // metadataBase: new URL('https://my-electric.vercel.app/'),
     openGraph: {
-      title: meta.openGraph?.title ?? 'myELECTRIC — Професійні електромонтажні роботи',
-      description:
-        meta.openGraph?.description ??
-        'Монтаж електропроводки, інверторів та систем резервного живлення. Надійні рішення для дому та бізнесу.',
-      siteName: meta.openGraph?.siteName ?? 'myELECTRIC',
+      title: meta.openGraph?.title
+        ? meta.openGraph?.title
+        : 'myELECTRIC — Професійні електромонтажні роботи',
+      description: meta.openGraph?.description
+        ? meta.openGraph?.description
+        : 'Монтаж електропроводки, інверторів та систем резервного живлення. Надійні рішення для дому та бізнесу.',
+      siteName: meta.openGraph?.siteName ? meta.openGraph?.siteName : 'my-ELECTRIC',
       images: [ogImageUrl],
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: meta.openGraph?.title ?? 'myELECTRIC — Професійні електромонтажні роботи',
-      description:
-        meta.openGraph?.description ??
-        'Монтаж електропроводки, інверторів та систем резервного живлення. Надійні рішення для дому та бізнесу.',
+      title: meta.openGraph?.title
+        ? meta.openGraph?.title
+        : 'myELECTRIC — Професійні електромонтажні роботи',
+      description: meta.openGraph?.description
+        ? meta.openGraph?.description
+        : 'Монтаж електропроводки, інверторів та систем резервного живлення. Надійні рішення для дому та бізнесу.',
       images: [ogImageUrl],
     },
   }
