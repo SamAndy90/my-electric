@@ -7,6 +7,7 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
 import { Media } from './collections/Media'
+import { Pages } from './collections/Pages'
 import { Service } from './collections/Service'
 import { Test } from './collections/Test'
 import { Users } from './collections/Users'
@@ -21,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Test, Service],
+  collections: [Users, Media, Test, Service, Pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
