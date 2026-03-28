@@ -6,13 +6,6 @@ import { getImageUrl, isMedia } from '@/lib/utils'
 
 import { HeroSlider } from '@/components/HeroSlider'
 
-// const ogImageUrl = '/opengraph-image.jpg'
-
-// type Props = {
-//   params: Promise<{ slug: string }>
-//   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-// }
-
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
@@ -51,7 +44,6 @@ export async function generateMetadata(): Promise<Metadata> {
           'електрощит',
           'послуги електрика',
         ],
-    // metadataBase: new URL('https://my-electric.vercel.app/'),
     openGraph: {
       title: meta.openGraph?.title
         ? meta.openGraph?.title
